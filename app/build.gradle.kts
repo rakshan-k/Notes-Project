@@ -44,7 +44,6 @@ dependencies {
     // Activity and ConstraintLayout
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(com.google.android.material:material:1.4.0)
 
     // RecyclerView for displaying the notes list
     implementation("androidx.recyclerview:recyclerview:1.3.0")
@@ -56,7 +55,7 @@ dependencies {
     // ViewModel and LiveData for lifecycle-aware data handling
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
-
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
     // Glide for loading images
     implementation("com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")

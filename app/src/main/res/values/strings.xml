@@ -1,5 +1,6 @@
 <resources>
     <!-- Add other strings here -->
+    <string name="QuickNotes">QuickNotes</string>
     <string name="add_note">Add Note</string>
     <string name="filter_notes">Filter Notes</string>
 </resources>

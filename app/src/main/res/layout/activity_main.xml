@@ -7,27 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Existing TextView -->
+    <!-- TextView for Title or Greeting -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello World!"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toTopOf="@id/recyclerView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="16dp" />
 
-    <!-- New RecyclerView -->
+    <!-- RecyclerView to display notes -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/textView"
+    app:layout_constraintBottom_toTopOf="@id/fabAddNote"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="8dp" />
 
-    <!-- FloatingActionButton -->
+    <!-- FloatingActionButton for Add Note -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddNote"
         android:layout_width="wrap_content"
@@ -39,16 +43,16 @@
         app:layout_constraintMarginEnd="16dp"
         app:layout_constraintMarginBottom="16dp" />
 
-    <!-- ImageButton -->
+    <!-- ImageButton for Filter Notes -->
     <ImageButton
         android:id="@+id/btnFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_filter"
         android:contentDescription="@string/filter_notes"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginTop="16dp" />
+        android:src="@android:drawable/ic_menu_sort_by_size"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintMarginStart="16dp"
+    app:layout_constraintMarginTop="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
