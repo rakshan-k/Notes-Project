@@ -5,22 +5,25 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Title TextView -->
     <TextView
-        android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Note Title"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="Title"
+        android:textSize="18sp" />
 
-    <!-- Content TextView (brief preview of content) -->
     <TextView
-        android:id="@+id/textContent"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Note Content Preview"
-        android:textSize="14sp"
-        android:paddingTop="8dp" />
+        android:text="Content"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="12sp" />
 
 </LinearLayout>

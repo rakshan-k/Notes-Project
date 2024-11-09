@@ -15,43 +15,40 @@ import java.util.List;
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHolder> {
 
-    private final List<Note> notesList;
+    private List<Note> notesList;
 
     public NotesAdapter(List<Note> notesList) {
         this.notesList = notesList;
     }
 
-    @NonNull
     @Override
-    public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Inflate the item layout for each note
+    public NoteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_note, parent, false);
         return new NoteViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
-        // Bind the note data to the view
+    public void onBindViewHolder(NoteViewHolder holder, int position) {
         Note note = notesList.get(position);
-        holder.titleTextView.setText(note.getTitle());  // Set note title
-        holder.contentTextView.setText(note.getContent());  // Set note content (brief preview)
+        holder.titleTextView.setText(note.getTitle());
+        holder.contentTextView.setText(note.getContent());
+        holder.categoryTextView.setText(note.getCategory());
     }
 
     @Override
     public int getItemCount() {
-        return notesList.size();  // Return the size of the notes list
+        return notesList.size();
     }
 
-    // ViewHolder for each note item
     public static class NoteViewHolder extends RecyclerView.ViewHolder {
-        TextView titleTextView;
-        TextView contentTextView;
 
-        public NoteViewHolder(@NonNull View itemView) {
+        TextView titleTextView, contentTextView, categoryTextView;
+
+        public NoteViewHolder(View itemView) {
             super(itemView);
-            // Find the views by their IDs from the item layout
-            titleTextView = itemView.findViewById(R.id.textTitle);
-            contentTextView = itemView.findViewById(R.id.textContent);
+            titleTextView = itemView.findViewById(R.id.tvTitle);
+            contentTextView = itemView.findViewById(R.id.tvContent);
+            categoryTextView = itemView.findViewById(R.id.tvCategory);
         }
     }
 }

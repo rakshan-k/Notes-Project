@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         // If notes are found, add them to the list and update the adapter
         if (loadedNotes != null && !loadedNotes.isEmpty()) {
             notesList.addAll(loadedNotes);
-            notesAdapter.notifyDataSetChanged();
+            notesAdapter.notifyDataSetChanged(); // Notify the adapter to refresh the list
         } else {
             // Show a message if no notes are found
             Toast.makeText(this, "No notes found", Toast.LENGTH_SHORT).show();
