@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Notes Project</string>
+    <!-- Add other strings here -->
+    <string name="add_note">Add Note</string>
+    <string name="filter_notes">Filter Notes</string>
 </resources>

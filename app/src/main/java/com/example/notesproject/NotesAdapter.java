@@ -38,7 +38,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
 
         public NoteViewHolder(View itemView) {
             super(itemView);
-n
+            noteTitle = itemView.findViewById(R.id.noteTitle);
+            noteContent = itemView.findViewById(R.id.noteContent);
         }
     }
 }

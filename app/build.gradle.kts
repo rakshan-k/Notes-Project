@@ -44,6 +44,7 @@ dependencies {
     // Activity and ConstraintLayout
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(com.google.android.material:material:1.4.0)
 
     // RecyclerView for displaying the notes list
     implementation("androidx.recyclerview:recyclerview:1.3.0")
